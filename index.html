@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>A Digital Gift for TULI ❤️</title>
+    <meta name="title" content="A Special Surprise for TULI ❤️">
+    <meta name="description" content="A beautiful interactive website created specifically for TULI. A magical Valentine's Day experience.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuli.love/"> 
+    <meta property="og:title" content="A Special Surprise for TULI ❤️">
+    <meta property="og:description" content="Click to open a magical digital gift.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="A Special Surprise for TULI ❤️">
+    <meta property="twitter:description" content="Click to open a magical digital gift.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        background-color: #0c0202;
+        color: white;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient {
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      }
+      .glow-border {
+        position: relative;
+      }
+      .glow-border::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        background: linear-gradient(45deg, #ff4e50, #ff99ac, #fc913a, #ff4e50);
+        background-size: 400% 400%;
+        z-index: -1;
+        filter: blur(8px);
+        border-radius: inherit;
+        opacity: 0.3;
+        animation: gradientBG 5s linear infinite;
+      }
+      .noise {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        opacity: 0.04;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      /* Custom scrollbar for web feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+        "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
